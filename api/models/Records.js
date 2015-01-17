@@ -9,6 +9,13 @@ module.exports = {
 
   attributes: {
 
-  }
+  },
+	
+	beforeCreate: function (values, cb) {
+		if (Object.keys(values).length === 0)
+			cb("no data");
+		else
+			cb();
+    }
 };
 
